@@ -1,13 +1,57 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default function App() {
+import HomeScreen from './components/HomeScreen/HomeScreen';
+
+const Screen1 = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+      <View style={styles.container}>
+        <Text>I am Screen 1</Text>
+      </View>
   );
-}
+};
+
+const Screen2 = () => {
+  return (
+      <View style={styles.container}>
+        <Text>I am Screen 2</Text>
+      </View>
+  );
+};
+
+const Screen3 = () => {
+  return (
+      <View style={styles.container}>
+        <Text>I am Screen 3</Text>
+      </View>
+  );
+};
+
+const Screen4 = () => {
+  return (
+      <View style={styles.container}>
+        <Text>I am Screen 4</Text>
+      </View>
+  );
+};
+
+const Stack = createStackNavigator();
+
+const App = () => {
+  return (
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Screen1" component={Screen1} />
+          <Stack.Screen name="Screen2" component={Screen2} />
+          <Stack.Screen name="Screen3" component={Screen3} />
+          <Stack.Screen name="Screen4" component={Screen4} />
+        </Stack.Navigator>
+      </NavigationContainer>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -17,3 +61,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App;
