@@ -17,24 +17,24 @@ export default class Settings extends Component {
 
     render(){
         return(
-            <View style={styles.container}>
+            <View style={styles.setting}>
              
-             <MaterialIcons 
+             <MaterialIcons style={styles.setting}
+
                     name='settings'
-                    size={25}
-    
-                    onPress={this.openingO} />
+                    size={40}
+                    onPress={this.openingO} 
+            />
              {this.state.isVisible?
-        <Overlay
-            isVisible={this.state.isVisible}
-            width="auto"
-            height="auto" 
-            onBackdropPress={this.openingO}
+            <Overlay
+                isVisible={this.state.isVisible}
+                width="auto"
+                height="auto" 
+                onBackdropPress={this.openingO}
             >
-        <Button  title="Vibrate" onPress={()=>console.log("press")} />
-        <Button  title="Sound" onPress={()=>console.log("press")} />
-        <Button  title="Hi" onPress={()=>console.log("press")} />
-        </Overlay>:null}
+                <Button  title="Vibrate" onPress={()=>console.log("press")} />
+                <Button  title="Sound" onPress={()=>console.log("press")} />
+            </Overlay>:null}
                  
         </View>
         );
@@ -42,6 +42,13 @@ export default class Settings extends Component {
 }
   
   const styles = StyleSheet.create({
+    setting:{
+       // alignItems: 'top'
+        top: 25,
+        right: 20,
+        position: 'absolute',
+    },
+
     container: {
       flex: 1,
       backgroundColor: '#fff',
