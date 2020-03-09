@@ -1,10 +1,18 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./components/HomeScreen";
 import backIcon from "./assets/backIcon.png";
 
+const buttonOverRide = () => ({
+  headerBackImage: () => (
+    <Image
+      style={{ width: 30, height: 30 }}
+      source={require("./assets/backIcon.png")}
+    />
+  )
+});
 const Screen1 = () => {
   return (
     <View style={styles.container}>
@@ -47,15 +55,23 @@ const App = () => {
         <Stack.Screen
           name="Screen1"
           component={Screen1}
-          options={({ navigation, route }) => ({
-            headerBackImage: props => (
-              <img src={backIcon} width="10%" length="10%" /
-            )
-          })}
+          options={buttonOverRide}
         />
-        <Stack.Screen name="Screen2" component={Screen2} />
-        <Stack.Screen name="Screen3" component={Screen3} />
-        <Stack.Screen name="Screen4" component={Screen4} />
+        <Stack.Screen
+          name="Screen2"
+          component={Screen2}
+          options={buttonOverRide}
+        />
+        <Stack.Screen
+          name="Screen3"
+          component={Screen3}
+          options={buttonOverRide}
+        />
+        <Stack.Screen
+          name="Screen4"
+          component={Screen4}
+          options={buttonOverRide}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
