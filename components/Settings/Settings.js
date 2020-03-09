@@ -18,9 +18,7 @@ export default class Settings extends Component {
     render(){
         return(
             <View style={styles.setting}>
-             
-             <MaterialIcons style={styles.setting}
-
+             <MaterialIcons style={styles.settings}
                     name='settings'
                     size={40}
                     onPress={this.openingO} 
@@ -42,7 +40,7 @@ export default class Settings extends Component {
 }
   
   const styles = StyleSheet.create({
-    setting:{
+    settings:{
        // alignItems: 'top'
         top: 25,
         right: 20,
