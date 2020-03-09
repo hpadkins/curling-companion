@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Settings from './components/Settings/Settings';
+import { MaterialIcons } from 'react-native-vector-icons';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+export default class App extends React.Component {
+  render() {
+    return <Settings/>;
+  }
 }
 
 const styles = StyleSheet.create({
