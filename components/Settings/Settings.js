@@ -20,7 +20,7 @@ export default class Settings extends Component {
             <View style={styles.setting}>
              <MaterialIcons style={styles.settings}
                     name='settings'
-                    size={40}
+                    size={35}
                     onPress={this.openingO} 
             />
              {this.state.isVisible?
@@ -41,9 +41,9 @@ export default class Settings extends Component {
   
   const styles = StyleSheet.create({
     settings:{
-       // alignItems: 'top'
+       
         top: 25,
-        right: 20,
+        left: 150,
         position: 'absolute',
     },
 
