@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
+import { widthPercentageToDP as wp } from "react-native-responsive-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from './components/HomeScreen/HomeScreen';
@@ -8,8 +9,8 @@ import backIcon from "./assets/backIcon.png";
 const buttonOverRide = () => ({
   headerBackImage: () => (
     <Image
-      style={{ width: 30, height: 30 }}
-      source={require("./assets/backIcon.png")}
+      style={styles.backButton}
+      source={backIcon}
     />
   )
 });
@@ -85,6 +86,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  backButton: {
+    width: 30,
+    height: 30,
+    marginLeft: wp('1%'),
+    marginRight: wp('1%')
+  }
 });
 
 export default App;

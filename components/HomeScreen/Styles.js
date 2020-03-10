@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: 'white',
+    fontSize: hp('2%')
   },
 });
 
