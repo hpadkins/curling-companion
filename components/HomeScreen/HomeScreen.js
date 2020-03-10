@@ -5,6 +5,7 @@ import {
   listenOrientationChange,
   removeOrientationListener
 } from 'react-native-responsive-screen';
+import Settings from '../Settings/Settings';
 
 class HomeScreen extends Component {
 
@@ -20,6 +21,7 @@ class HomeScreen extends Component {
     const { navigation } = this.props;
     return (
       <View style={styles.container}>
+        <Settings/>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Curling Companion</Text>
         </View>
