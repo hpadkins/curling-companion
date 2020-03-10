@@ -30,8 +30,10 @@ export default class Settings extends Component {
                 height="auto" 
                 onBackdropPress={this.openingO}
             >
-                <Button  title="Vibrate" onPress={()=>console.log("press")} />
-                <Button  title="Sound" onPress={()=>console.log("press")} />
+                <View>
+                  <Button  title="Vibrate" onPress={()=>console.log("press")} />
+                  <Button  title="Sound" onPress={()=>console.log("press")} />
+                </View>
             </Overlay>:null}
                  
         </View>
