@@ -8,15 +8,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   titleContainer: {
-    marginTop: wp('35%'),
-
+    marginTop: hp('25%'),
   },
   title: {
     fontSize: wp('8%'),
-
   },
   buttonContainer: {
-    flex: .8,
+    flex: .9,
     justifyContent: 'center',
   },
   button: {
