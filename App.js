@@ -3,47 +3,44 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import { widthPercentageToDP as wp } from "react-native-responsive-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from './components/HomeScreen/HomeScreen';
+import HomeScreen from "./components/HomeScreen/HomeScreen";
 import backIcon from "./assets/backIcon.png";
 
+import PreGameScreen from "./components/PreGameScreen/PreGameScreen";
+
 const buttonOverRide = () => ({
-  headerBackImage: () => (
-    <Image
-      style={styles.backButton}
-      source={backIcon}
-    />
-  )
+  headerBackImage: () => <Image style={styles.backButton} source={backIcon} />
 });
 
 const Screen1 = () => {
   return (
-      <View style={styles.container}>
-        <Text>I am Screen 1</Text>
-      </View>
+    <View style={styles.container}>
+      <Text>I am Screen 1</Text>
+    </View>
   );
 };
 
 const Screen2 = () => {
   return (
-      <View style={styles.container}>
-        <Text>I am Screen 2</Text>
-      </View>
+    <View style={styles.container}>
+      <Text>I am Screen 2</Text>
+    </View>
   );
 };
 
 const Screen3 = () => {
   return (
-      <View style={styles.container}>
-        <Text>I am Screen 3</Text>
-      </View>
+    <View style={styles.container}>
+      <Text>I am Screen 3</Text>
+    </View>
   );
 };
 
 const Screen4 = () => {
   return (
-      <View style={styles.container}>
-        <Text>I am Screen 4</Text>
-      </View>
+    <View style={styles.container}>
+      <Text>I am Screen 4</Text>
+    </View>
   );
 };
 
@@ -51,6 +48,12 @@ const Stack = createStackNavigator();
 
 const App = () => {
   return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={PreGameScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+    /*
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Home" component={HomeScreen} />
@@ -76,22 +79,22 @@ const App = () => {
         />
         </Stack.Navigator>
       </NavigationContainer>
+      */
   );
 };
-
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
   },
   backButton: {
     width: 30,
     height: 30,
-    marginLeft: wp('1%'),
-    marginRight: wp('1%')
+    marginLeft: wp("1%"),
+    marginRight: wp("1%")
   }
 });
 
