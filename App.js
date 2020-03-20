@@ -4,6 +4,7 @@ import { widthPercentageToDP as wp } from "react-native-responsive-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from './components/HomeScreen/HomeScreen';
+import StartGame from './components/StartGame/StartGame';
 import backIcon from "./assets/backIcon.png";
 
 const buttonOverRide = () => ({
@@ -55,8 +56,8 @@ const App = () => {
         <Stack.Navigator>
           <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen
-          name="Screen1"
-          component={Screen1}
+          name="StartGame"
+          component={StartGame}
           options={buttonOverRide}
         />
         <Stack.Screen

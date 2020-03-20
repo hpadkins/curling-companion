@@ -28,9 +28,9 @@ class HomeScreen extends Component {
         <View style={styles.buttonContainer}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigation.navigate("Screen1")}
+            onPress={() => navigation.navigate("StartGame")}
           >
-            <Text style={styles.buttonText}>Screen 1</Text>
+            <Text style={styles.buttonText}>Start Game</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
