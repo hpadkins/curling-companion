@@ -6,6 +6,7 @@ import {
   removeOrientationListener
 } from "react-native-responsive-screen";
 import Settings from "../Settings/Settings";
+import StartGame from "../StartGame/StartGame";
 
 import RadioForm, {
   RadioButton,
@@ -59,9 +60,9 @@ class PreGameScreen extends Component {
         <View style={styles.buttonContainer}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigation.navigate("HomeScreen")}
+            onPress={() => navigation.navigate("StartGame")}
           >
-            <Text style={styles.buttonText}>Screen 4</Text>
+            <Text style={styles.buttonText}>Start Game</Text>
           </TouchableOpacity>
         </View>
       </View>
