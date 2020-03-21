@@ -6,6 +6,7 @@ import {
   removeOrientationListener
 } from 'react-native-responsive-screen';
 import Settings from '../Settings/Settings';
+import PreGameScreen from '../PreGameScreen/PreGameScreen';
 
 class HomeScreen extends Component {
 
@@ -28,9 +29,9 @@ class HomeScreen extends Component {
         <View style={styles.buttonContainer}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigation.navigate("StartGame")}
+            onPress={() => navigation.navigate("PreGameScreen")}
           >
-            <Text style={styles.buttonText}>Start Game</Text>
+            <Text style={styles.buttonText}>New Game</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
