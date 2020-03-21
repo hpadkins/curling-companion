@@ -31,7 +31,7 @@ class HomeScreen extends Component {
             style={styles.button}
             onPress={() => navigation.navigate("PreGameScreen")}
           >
-            <Text style={styles.buttonText}>Start Game</Text>
+            <Text style={styles.buttonText}>New Game</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
