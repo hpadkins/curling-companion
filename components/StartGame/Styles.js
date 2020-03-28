@@ -3,32 +3,10 @@ import {heightPercentageToDP as hp, widthPercentageToDP as wp} from "react-nativ
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
+    alignItems: 'center',
+    paddingBottom: hp('30%'),
     backgroundColor: '#E5FFFF',
-    alignItems: 'center',
-  },
-  titleContainer: {
-    marginTop: hp('25%'),
-  },
-  title: {
-    fontSize: wp('8%'),
-  },
-  buttonContainer: {
-    flex: .9,
-    justifyContent: 'center',
-  },
-  button: {
-    height: hp('7%'),
-    width: wp('35%'),
-    borderRadius: wp('10%'),
-    margin: 5,
-    backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: hp('2%')
   },
   optionContainer: {
     backgroundColor: '#979799',
@@ -67,7 +45,7 @@ const styles = StyleSheet.create({
     fontSize: wp('4.3%')
   },
   missedTitleContainer: {
-    
+
   }
 });
 

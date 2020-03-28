@@ -1,6 +1,6 @@
 import React, { Component }  from 'react'
 import styles from "./Styles";
-import { ScrollView, View, Text, Image} from 'react-native';
+import { ScrollView, View, Text } from 'react-native';
 import RadioForm from "react-native-simple-radio-button";
 
 const changeLabelStyle = (labelText) => {
@@ -65,11 +65,11 @@ class StartGame extends Component {
 
   render() {
     return (
-      <ScrollView contentContainerStyle={styles.container} alwaysBounceVertical={false}>
-        <View style={styles.optionContainer}>
-          <View style={styles.optionTitle}>
-            <Text style={styles.optionText}>Rotation</Text>
-          </View>
+      <ScrollView contentContainerStyle={styles.container}>
+          <View style={styles.optionContainer}>
+            <View style={styles.optionTitle}>
+              <Text style={styles.optionText}>Rotation</Text>
+           </View>
           <View style={styles.labelContainer}>
             <RadioForm
               radio_props={rotationOpts}
@@ -82,132 +82,132 @@ class StartGame extends Component {
               selectedLabelColor={'#FFFFFF'}
               initial={0}
               onPress={value => {
-                this.setState({ chosenRotation: value });
+                this.setState({chosenRotation: value});
               }}
             />
           </View>
         </View>
-        <View style={styles.optionContainer}>
-          <View style={styles.optionTitle}>
-            <Text style={styles.optionText}>Shot Type</Text>
-          </View>
-          <View style={styles.labelContainer}>
-            <RadioForm
-              radio_props={shotTypeOpts}
-              formHorizontal={true}
-              labelHorizontal={false}
-              animation={false}
-              buttonColor={"#A0060F"}
-              selectedButtonColor={"#A0060F"}
-              labelColor={'#FFFFFF'}
-              selectedLabelColor={'#FFFFFF'}
-              initial={0}
-              onPress={value => {
-                this.setState({ chosenShotType: value });
-              }}
-            />
-          </View>
-        </View>
-        <View style={styles.optionContainer}>
-          <View style={styles.optionTitle}>
-            <Text style={styles.optionText}>Score</Text>
-          </View>
-          <View style={styles.labelContainer}>
-            <RadioForm
-              radio_props={scoreOpts}
-              formHorizontal={true}
-              labelHorizontal={false}
-              animation={false}
-              buttonColor={"#A0060F"}
-              selectedButtonColor={"#A0060F"}
-              labelColor={'#FFFFFF'}
-              selectedLabelColor={'#FFFFFF'}
-              initial={0}
-              onPress={value => {
-                this.setState({ chosenScore: value });
-              }}
-            />
-          </View>
-        </View>
-        <View style={styles.optionContainer}>
-          <View style={styles.optionTitle}>
-            <Text style={styles.optionText}>Missed Shot:</Text>
-          </View>
-          <View style={styles.labelContainer}>
-            <View style={styles.missedTitleContainer}>
-              <Text style={styles.missedOptionText}>Weight:</Text>
-            <RadioForm
-              radio_props={missedWeightOpts}
-              formHorizontal={true}
-              labelHorizontal={false}
-              animation={false}
-              buttonColor={"#A0060F"}
-              selectedButtonColor={"#A0060F"}
-              labelColor={'#FFFFFF'}
-              selectedLabelColor={'#FFFFFF'}
-              initial={0}
-              onPress={value => {
-                this.setState({ chosenWeightMissed: value });
-              }}
-            />
+          <View style={styles.optionContainer}>
+            <View style={styles.optionTitle}>
+              <Text style={styles.optionText}>Shot Type</Text>
             </View>
-            
-          </View>
-          <View style={styles.labelContainer}>
-            <View style={styles.missedTitleContainer}>
-              <Text style={styles.missedOptionText}>Line:</Text>
-            <RadioForm
-              radio_props={missedLineOpts}
-              formHorizontal={true}
-              labelHorizontal={false}
-              animation={false}
-              buttonColor={"#A0060F"}
-              selectedButtonColor={"#A0060F"}
-              labelColor={'#FFFFFF'}
-              selectedLabelColor={'#FFFFFF'}
-              initial={0}
-              onPress={value => {
-                this.setState({ chosenLineMissed: value });
-              }}
-            />
+            <View style={styles.labelContainer}>
+              <RadioForm
+                radio_props={shotTypeOpts}
+                formHorizontal={true}
+                labelHorizontal={false}
+                animation={false}
+                buttonColor={"#A0060F"}
+                selectedButtonColor={"#A0060F"}
+                labelColor={'#FFFFFF'}
+                selectedLabelColor={'#FFFFFF'}
+                initial={0}
+                onPress={value => {
+                  this.setState({chosenShotType: value});
+                }}
+              />
             </View>
-            
           </View>
-          <View style={styles.labelContainer}>
-            <View style={styles.missedTitleContainer}>
-              <Text style={styles.missedOptionText}>Other:</Text>
-            <RadioForm
-              radio_props={missedOther1Opts}
-              formHorizontal={true}
-              labelHorizontal={false}
-              animation={false}
-              buttonColor={"#A0060F"}
-              selectedButtonColor={"#A0060F"}
-              labelColor={'#FFFFFF'}
-              selectedLabelColor={'#FFFFFF'}
-              initial={0}
-              onPress={value => {
-                this.setState({ chosenOther1Missed: value });
-              }}
-            />
-            <RadioForm
-              radio_props={missedOther2Opts}
-              formHorizontal={true}
-              labelHorizontal={false}
-              animation={false}
-              buttonColor={"#A0060F"}
-              selectedButtonColor={"#A0060F"}
-              labelColor={'#FFFFFF'}
-              selectedLabelColor={'#FFFFFF'}
-              initial={0}
-              onPress={value => {
-                this.setState({ chosenOther2Missed: value });
-              }}
-            />
+          <View style={styles.optionContainer}>
+            <View style={styles.optionTitle}>
+              <Text style={styles.optionText}>Score</Text>
             </View>
-            
+            <View style={styles.labelContainer}>
+              <RadioForm
+                radio_props={scoreOpts}
+                formHorizontal={true}
+                labelHorizontal={false}
+                animation={false}
+                buttonColor={"#A0060F"}
+                selectedButtonColor={"#A0060F"}
+                labelColor={'#FFFFFF'}
+                selectedLabelColor={'#FFFFFF'}
+                initial={0}
+                onPress={value => {
+                  this.setState({chosenScore: value});
+                }}
+              />
+            </View>
           </View>
-        </View>
+          <View style={styles.optionContainer}>
+            <View style={styles.optionTitle}>
+              <Text style={styles.optionText}>Missed Shot</Text>
+            </View>
+            <View style={styles.labelContainer}>
+              <View style={styles.missedTitleContainer}>
+                <Text style={styles.missedOptionText}>Weight</Text>
+                <RadioForm
+                  radio_props={missedWeightOpts}
+                  formHorizontal={true}
+                  labelHorizontal={false}
+                  animation={false}
+                  buttonColor={"#A0060F"}
+                  selectedButtonColor={"#A0060F"}
+                  labelColor={'#FFFFFF'}
+                  selectedLabelColor={'#FFFFFF'}
+                  initial={0}
+                  onPress={value => {
+                    this.setState({chosenWeightMissed: value});
+                  }}
+                />
+              </View>
+
+            </View>
+            <View style={styles.labelContainer}>
+              <View style={styles.missedTitleContainer}>
+                <Text style={styles.missedOptionText}>Line</Text>
+                <RadioForm
+                  radio_props={missedLineOpts}
+                  formHorizontal={true}
+                  labelHorizontal={false}
+                  animation={false}
+                  buttonColor={"#A0060F"}
+                  selectedButtonColor={"#A0060F"}
+                  labelColor={'#FFFFFF'}
+                  selectedLabelColor={'#FFFFFF'}
+                  initial={0}
+                  onPress={value => {
+                    this.setState({chosenLineMissed: value});
+                  }}
+                />
+              </View>
+
+            </View>
+            <View style={styles.labelContainer}>
+              <View style={styles.missedTitleContainer}>
+                <Text style={styles.missedOptionText}>Other</Text>
+                <RadioForm
+                  radio_props={missedOther1Opts}
+                  formHorizontal={true}
+                  labelHorizontal={false}
+                  animation={false}
+                  buttonColor={"#A0060F"}
+                  selectedButtonColor={"#A0060F"}
+                  labelColor={'#FFFFFF'}
+                  selectedLabelColor={'#FFFFFF'}
+                  initial={0}
+                  onPress={value => {
+                    this.setState({chosenOther1Missed: value});
+                  }}
+                />
+                <RadioForm
+                  radio_props={missedOther2Opts}
+                  formHorizontal={true}
+                  labelHorizontal={false}
+                  animation={false}
+                  buttonColor={"#A0060F"}
+                  selectedButtonColor={"#A0060F"}
+                  labelColor={'#FFFFFF'}
+                  selectedLabelColor={'#FFFFFF'}
+                  initial={0}
+                  onPress={value => {
+                    this.setState({chosenOther2Missed: value});
+                  }}
+                />
+              </View>
+
+            </View>
+          </View>
       </ScrollView>
     );
   }
