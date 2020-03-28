@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#A0060F',
     borderRadius: 50,
     height: hp('5%'),
-    width: wp('22%'),
+    width: wp('25%'),
     marginTop: hp('2%'),
     marginLeft: wp('3%'),
     marginBottom: hp('2.5%')
