@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: hp('20%'),
     width: wp('90%'),
-    marginTop: hp('4%')
+    marginTop: hp('1.5%')
   },
   optionTitle: {
     justifyContent: 'center',
@@ -60,6 +60,14 @@ const styles = StyleSheet.create({
   labelText: {
     fontWeight: 'bold',
     fontSize: wp('4%')
+  },
+  missedOptionText: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: wp('4.3%')
+  },
+  missedTitleContainer: {
+    
   }
 });
 
