@@ -11,9 +11,8 @@ const styles = StyleSheet.create({
   optionContainer: {
     backgroundColor: '#979799',
     borderRadius: 10,
-    height: hp('20%'),
     width: wp('90%'),
-    marginTop: hp('1.5%')
+    marginTop: hp('1.5%'),
   },
   optionTitle: {
     justifyContent: 'center',
@@ -36,13 +35,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   labelText: {
-    fontWeight: 'bold',
-    fontSize: wp('4%')
+    fontSize: wp('3.5%'),
+    lineHeight: hp('3.4%'),
+    color: 'white'
   },
   missedOptionContainer: {
     backgroundColor: '#979799',
     borderRadius: 10,
-    height: hp('64%'),
     width: wp('90%'),
     marginTop: hp('1.5%')
   },
