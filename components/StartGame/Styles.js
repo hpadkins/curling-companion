@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     alignItems: 'center',
-    paddingBottom: hp('30%'),
+    paddingBottom: 100,
     backgroundColor: '#E5FFFF',
   },
   optionContainer: {
@@ -18,18 +18,18 @@ const styles = StyleSheet.create({
   optionTitle: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#A0060F',
+    backgroundColor: '#7E0006',
     borderRadius: 50,
     height: hp('5%'),
-    width: wp('25%'),
     marginTop: hp('2%'),
     marginLeft: wp('3%'),
+    marginRight: wp('3%'),
     marginBottom: hp('2.5%')
   },
   optionText: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: wp('4.3%')
+    fontSize: wp('4.3%'),
   },
   labelContainer: {
     justifyContent: 'center',
@@ -39,13 +39,29 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: wp('4%')
   },
+  missedOptionContainer: {
+    backgroundColor: '#979799',
+    borderRadius: 10,
+    height: hp('64%'),
+    width: wp('90%'),
+    marginTop: hp('1.5%')
+  },
   missedOptionText: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: wp('4.3%')
+    fontSize: wp('5.3%'),
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: hp('1.5%'),
   },
   missedTitleContainer: {
-
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: hp('2%'),
+    borderWidth: 1,
+    borderRadius: 5,
+    borderColor: '#530004',
+    width: wp('80%')
   }
 });
 

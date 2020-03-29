@@ -129,7 +129,7 @@ class StartGame extends Component {
               />
             </View>
           </View>
-          <View style={styles.optionContainer}>
+          <View style={styles.missedOptionContainer}>
             <View style={styles.optionTitle}>
               <Text style={styles.optionText}>Missed Shot</Text>
             </View>
@@ -151,7 +151,6 @@ class StartGame extends Component {
                   }}
                 />
               </View>
-
             </View>
             <View style={styles.labelContainer}>
               <View style={styles.missedTitleContainer}>
@@ -171,7 +170,6 @@ class StartGame extends Component {
                   }}
                 />
               </View>
-
             </View>
             <View style={styles.labelContainer}>
               <View style={styles.missedTitleContainer}>
@@ -185,9 +183,13 @@ class StartGame extends Component {
                   selectedButtonColor={"#A0060F"}
                   labelColor={'#FFFFFF'}
                   selectedLabelColor={'#FFFFFF'}
-                  initial={0}
+                  initial={-1}
                   onPress={value => {
-                    this.setState({chosenOther1Missed: value});
+                    if (value === 0) {
+                      this.setState({chosenOther1Missed: -1});
+                    } else {
+                      this.setState({chosenOther1Missed: value});
+                    }
                   }}
                 />
                 <RadioForm
@@ -199,13 +201,12 @@ class StartGame extends Component {
                   selectedButtonColor={"#A0060F"}
                   labelColor={'#FFFFFF'}
                   selectedLabelColor={'#FFFFFF'}
-                  initial={0}
+                  initial={-1}
                   onPress={value => {
                     this.setState({chosenOther2Missed: value});
                   }}
                 />
               </View>
-
             </View>
           </View>
       </ScrollView>
