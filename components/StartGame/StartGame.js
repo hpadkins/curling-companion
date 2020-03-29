@@ -74,8 +74,8 @@ class StartGame extends Component {
     optionName === OptionsEnum.SCORE ? this.setState({ chosenScore: value }) :
     optionName === OptionsEnum.WEIGHT ? this.setState({ chosenWeightMissed: value }) :
     optionName === OptionsEnum.LINE ? this.setState({ chosenLineMissed: value }) :
-    optionName === OptionsEnum.SWEEP_ERROR ? this.setState({ sweepMissed: value }) :
-    optionName === OptionsEnum.LINE_ERROR ? this.setState({ lineMissed: value }) :
+    optionName === OptionsEnum.SWEEP_ERROR ? this.setState({ sweepError: value }) :
+    optionName === OptionsEnum.LINE_ERROR ? this.setState({ lineError: value }) :
     console.log('Cannot set radio button state.');
 
   // This function returns the value of the state selected so that we can update the radio button on the UI
@@ -85,8 +85,8 @@ class StartGame extends Component {
     optionName === OptionsEnum.SCORE ? this.state.chosenScore :
     optionName === OptionsEnum.WEIGHT ? this.state.chosenWeightMissed :
     optionName === OptionsEnum.LINE ? this.state.chosenLineMissed :
-    optionName === OptionsEnum.SWEEP_ERROR ? this.state.sweepMissed :
-    optionName === OptionsEnum.LINE_ERROR ? this.state.lineMissed :
+    optionName === OptionsEnum.SWEEP_ERROR ? this.state.sweepError :
+    optionName === OptionsEnum.LINE_ERROR ? this.state.lineError :
     console.log('Cannot return state.');
 
   renderRadioButtons = (option, optionName) => {
