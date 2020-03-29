@@ -9,6 +9,7 @@ class StartGame extends Component
             <View style={styles.container}>
                 <Image source={require('./img/curling.svg')} 
                        style={{width: 400, height: 400}} />
+                <Text> Number of Ends </Text>
             </View>
         );
     }
