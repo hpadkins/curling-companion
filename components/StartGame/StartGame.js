@@ -14,13 +14,13 @@ class StartGame extends Component
 
   displayCurrentPlayer(curentPlayer) {
     if(curentPlayer < 2) {
-      return <Text>PLAYER 1</Text>
+      return <Text style={styles.player}>PLAYER 1:</Text>
     } else if (curentPlayer < 4) {
-      return <Text>PLAYER 2</Text>
+      return <Text style={styles.player}>PLAYER 2:</Text>
     } else if (curentPlayer < 6){
-      return <Text>PLAYER 3</Text>
+      return <Text style={styles.player}>PLAYER 3:</Text>
     } else {
-      return <Text>PLAYER 4</Text>
+      return <Text style={styles.player}>PLAYER 4:</Text>
     }
   }
 
@@ -30,8 +30,12 @@ class StartGame extends Component
 
     return (
       <View style={styles.container}>
-        <Text>END: {this.state.currentEnd +1}</Text>
+        <Text style={styles.end}>END {this.state.currentEnd +1} of {numbOfEnds}</Text>
         {this.displayCurrentPlayer(this.state.currentPlayer)}
+        <Text style={styles.temp}>Placeholders for shot scoring</Text>
+        <Text style={styles.temp}>Placeholders for shot scoring</Text>
+        <Text style={styles.temp}>Placeholders for shot scoring</Text>
+        <Text style={styles.temp}>Placeholders for shot scoring</Text>
       </View>
     );
   }

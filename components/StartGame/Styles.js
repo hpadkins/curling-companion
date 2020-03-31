@@ -5,30 +5,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#E5FFFF',
-    alignItems: 'center',
+    alignItems: 'stretch',
   },
-  titleContainer: {
-    marginTop: hp('25%'),
+  player: {
+    flex: 1, 
+    fontSize: hp('4%'),
+    alignSelf: 'flex-start',
   },
-  title: {
-    fontSize: wp('8%'),
-  },
-  buttonContainer: {
-    flex: .9,
-    justifyContent: 'center',
-  },
-  button: {
+  end: {
     height: hp('7%'),
-    width: wp('35%'),
-    borderRadius: wp('10%'),
-    margin: 5,
-    backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    fontSize: hp('5%'),
+    marginBottom: 10,
+    backgroundColor: '#CEE5E5',
+    textAlign: 'center',
+    borderBottomWidth: 2,
   },
-  buttonText: {
-    color: 'white',
-    fontSize: hp('2%')
+  temp: {
+    flex: 1,
+    margin: 3,
+    textAlign: 'center',
+    borderWidth: 2,
+    borderColor: '#CEE5E5',
   },
 });
 
