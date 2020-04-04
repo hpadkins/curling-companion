@@ -58,6 +58,8 @@ class StartGame extends Component {
   constructor() {
     super();
     this.state = {
+      currentEnd: 0,
+      currentShot: 0,
       chosenRotation: 0,
       chosenShotType: 0,
       chosenScore: 0,
@@ -68,6 +70,18 @@ class StartGame extends Component {
     }
   }
 
+  displayCurrentPlayer(currentShot) {
+    if(currentShot < 2) {
+      return <Text style={styles.player}>PLAYER 1:</Text>
+    } else if (currentShot < 4) {
+      return <Text style={styles.player}>PLAYER 2:</Text>
+    } else if (currentShot < 6){
+      return <Text style={styles.player}>PLAYER 3:</Text>
+    } else {
+      return <Text style={styles.player}>PLAYER 4:</Text>
+    }
+  }
+  
   handleRadioPress = (optionName, value) =>
     optionName === OptionsEnum.ROTATION ? this.setState({ chosenRotation: value }) :
     optionName === OptionsEnum.SHOT_TYPE ? this.setState({ chosenShotType: value }) :
@@ -130,57 +144,63 @@ class StartGame extends Component {
   };
 
   render() {
+    const numbOfEnds = this.props.route.params.numbOfEnds;  
     return (
-      <ScrollView contentContainerStyle={styles.container}>
-          <View style={styles.optionContainer}>
-            <View style={styles.optionTitle}>
-              <Text style={styles.optionText}>Rotation</Text>
-           </View>
-          <View style={styles.labelContainer}>
-            {this.renderRadioButtons(rotationOpts, OptionsEnum.ROTATION)}
-          </View>
-        </View>
-          <View style={styles.optionContainer}>
-            <View style={styles.optionTitle}>
-              <Text style={styles.optionText}>Shot Type</Text>
-            </View>
+       <View style={styles.container}>
+        <Text style={styles.end}>END {this.state.currentEnd +1} of {numbOfEnds}</Text>
+        <Text style={styles.end}>SHOT {this.state.currentShot +1}</Text>
+        <Text>{this.displayCurrentPlayer(this.state.currentShot)}</Text>  
+        <ScrollView contentContainerStyle={styles.container}>
+            <View style={styles.optionContainer}>
+              <View style={styles.optionTitle}>
+                <Text style={styles.optionText}>Rotation</Text>
+             </View>
             <View style={styles.labelContainer}>
-              {this.renderRadioButtons(shotTypeOpts, OptionsEnum.SHOT_TYPE)}
+              {this.renderRadioButtons(rotationOpts, OptionsEnum.ROTATION)}
             </View>
           </View>
-          <View style={styles.optionContainer}>
-            <View style={styles.optionTitle}>
-              <Text style={styles.optionText}>Score</Text>
-            </View>
-            <View style={styles.labelContainer}>
-              {this.renderRadioButtons(scoreOpts, OptionsEnum.SCORE)}
-            </View>
-          </View>
-          <View style={styles.missedOptionContainer}>
-            <View style={styles.optionTitle}>
-              <Text style={styles.optionText}>Missed Shot</Text>
-            </View>
-            <View style={styles.labelContainer}>
-              <View style={styles.missedTitleContainer}>
-                <Text style={styles.missedOptionText}>Weight</Text>
-                {this.renderRadioButtons(missedWeightOpts, OptionsEnum.WEIGHT)}
+            <View style={styles.optionContainer}>
+              <View style={styles.optionTitle}>
+                <Text style={styles.optionText}>Shot Type</Text>
+              </View>
+              <View style={styles.labelContainer}>
+                {this.renderRadioButtons(shotTypeOpts, OptionsEnum.SHOT_TYPE)}
               </View>
             </View>
-            <View style={styles.labelContainer}>
-              <View style={styles.missedTitleContainer}>
-                <Text style={styles.missedOptionText}>Line</Text>
-                {this.renderRadioButtons(missedLineOpts, OptionsEnum.LINE)}
+            <View style={styles.optionContainer}>
+              <View style={styles.optionTitle}>
+                <Text style={styles.optionText}>Score</Text>
+              </View>
+              <View style={styles.labelContainer}>
+                {this.renderRadioButtons(scoreOpts, OptionsEnum.SCORE)}
               </View>
             </View>
-            <View style={styles.labelContainer}>
-              <View style={styles.missedTitleContainer}>
-                <Text style={styles.missedOptionText}>Other</Text>
-                {this.renderRadioButtons(missedOther1Opts, OptionsEnum.SWEEP_ERROR)}
-                {this.renderRadioButtons(missedOther2Opts, OptionsEnum.LINE_ERROR)}
+            <View style={styles.missedOptionContainer}>
+              <View style={styles.optionTitle}>
+                <Text style={styles.optionText}>Missed Shot</Text>
+              </View>
+              <View style={styles.labelContainer}>
+                <View style={styles.missedTitleContainer}>
+                  <Text style={styles.missedOptionText}>Weight</Text>
+                  {this.renderRadioButtons(missedWeightOpts, OptionsEnum.WEIGHT)}
+                </View>
+              </View>
+              <View style={styles.labelContainer}>
+                <View style={styles.missedTitleContainer}>
+                  <Text style={styles.missedOptionText}>Line</Text>
+                  {this.renderRadioButtons(missedLineOpts, OptionsEnum.LINE)}
+                </View>
+              </View>
+              <View style={styles.labelContainer}>
+                <View style={styles.missedTitleContainer}>
+                  <Text style={styles.missedOptionText}>Other</Text>
+                  {this.renderRadioButtons(missedOther1Opts, OptionsEnum.SWEEP_ERROR)}
+                  {this.renderRadioButtons(missedOther2Opts, OptionsEnum.LINE_ERROR)}
+                </View>
               </View>
             </View>
-          </View>
-      </ScrollView>
+        </ScrollView>
+      </View>
     );
   }
 };

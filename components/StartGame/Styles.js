@@ -45,6 +45,27 @@ const styles = StyleSheet.create({
     width: wp('90%'),
     marginTop: hp('1.5%')
   },
+  player: {
+    flex: 1, 
+    fontSize: hp('3%'),
+    alignSelf: 'flex-start',
+  },
+  end: {
+    height: hp('3%'),
+    justifyContent: 'center',
+    fontSize: hp('3%'),
+    marginBottom: 10,
+    backgroundColor: '#CEE5E5',
+    textAlign: 'center',
+    borderBottomWidth: 2,
+  },
+  temp: {
+    flex: 1,
+    margin: 3,
+    textAlign: 'center',
+    borderWidth: 2,
+    borderColor: '#CEE5E5',
+  },
   missedOptionText: {
     color: 'white',
     fontWeight: 'bold',
