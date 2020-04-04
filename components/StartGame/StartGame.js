@@ -148,7 +148,8 @@ class StartGame extends Component {
     return (
        <View style={styles.container}>
         <Text style={styles.end}>END {this.state.currentEnd +1} of {numbOfEnds}</Text>
-        {this.displayCurrentPlayer(this.state.currentShot)}  
+        <Text style={styles.end}>SHOT {this.state.currentShot +1}</Text>
+        <Text>{this.displayCurrentPlayer(this.state.currentShot)}</Text>  
         <ScrollView contentContainerStyle={styles.container}>
             <View style={styles.optionContainer}>
               <View style={styles.optionTitle}>
