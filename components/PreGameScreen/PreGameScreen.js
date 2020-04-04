@@ -51,7 +51,6 @@ class PreGameScreen extends Component {
           animation={false}
           buttonColor={"#A0060F"}
           selectedButtonColor={"#A0060F"}
-          //labelColor={"#A0060F"}
           initial={6}
           onPress={value => {
             this.setState({ chosenOpt: value });

@@ -1,0 +1,8 @@
+image: "debian:10"
+
+before_script:
+  - apt-get update -qq && apt-get install -qq npm && npm install --quiet
+
+test:
+  script:
+    - npm test
