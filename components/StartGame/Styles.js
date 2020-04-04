@@ -47,13 +47,13 @@ const styles = StyleSheet.create({
   },
   player: {
     flex: 1, 
-    fontSize: hp('4%'),
+    fontSize: hp('3%'),
     alignSelf: 'flex-start',
   },
   end: {
-    height: hp('7%'),
+    height: hp('3%'),
     justifyContent: 'center',
-    fontSize: hp('5%'),
+    fontSize: hp('3%'),
     marginBottom: 10,
     backgroundColor: '#CEE5E5',
     textAlign: 'center',
