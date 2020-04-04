@@ -3,9 +3,11 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import { widthPercentageToDP as wp } from "react-native-responsive-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from './components/HomeScreen/HomeScreen';
-import StartGame from './components/StartGame/StartGame';
+import HomeScreen from "./components/HomeScreen/HomeScreen";
+import StartGame from "./components/StartGame/StartGame";
 import backIcon from "./assets/backIcon.png";
+
+import TestShotTracking from "./components/TestShotTracking/TestShotTracking";
 
 import PreGameScreen from "./components/PreGameScreen/PreGameScreen";
 
@@ -49,17 +51,9 @@ const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    /*
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={PreGameScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-    */
-    
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen
           name="PreGameScreen"
           component={PreGameScreen}
@@ -70,6 +64,13 @@ const App = () => {
           component={StartGame}
           options={buttonOverRide}
         />
+        /*
+        <Stack.Screen
+          name="TestShotTracking"
+          component={TestShotTracking}
+          options={buttonOverRide}
+        />
+        */
         <Stack.Screen
           name="Screen2"
           component={Screen2}
@@ -85,9 +86,8 @@ const App = () => {
           component={Screen4}
           options={buttonOverRide}
         />
-        </Stack.Navigator>
-      </NavigationContainer>
-      
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

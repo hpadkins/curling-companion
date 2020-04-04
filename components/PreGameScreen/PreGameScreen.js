@@ -59,7 +59,8 @@ class PreGameScreen extends Component {
         <View style={styles.buttonContainer}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigation.navigate("StartGame")}
+            onPress={() => navigation.navigate("testShotTracking")} // just for development testing
+            //            onPress={() => navigation.navigate("StartGame")}
           >
             <Text style={styles.buttonText}>Start Game</Text>
           </TouchableOpacity>
